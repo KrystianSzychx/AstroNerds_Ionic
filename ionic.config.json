@@ -1,0 +1,7 @@
+{
+  "name": "astroNerdsApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
