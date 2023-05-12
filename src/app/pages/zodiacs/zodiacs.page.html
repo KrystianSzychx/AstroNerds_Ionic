@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>zodiacs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-list>
+  <ion-item button *ngFor="let zodiac of zodiacs" [routerLink]="['/zodiacs/description']" [queryParams]="{ zodiacName: zodiac }">
+    <ion-label>
+      {{ zodiac }}
+    </ion-label>
+  </ion-item>
+ </ion-list>
+</ion-content>
