@@ -1,15 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>zodiacs</ion-title>
+    <ion-title>AstroNerds</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
  <ion-list>
   <ion-item button *ngFor="let zodiac of zodiacs" [routerLink]="['/zodiacs/description']" [queryParams]="{ zodiacName: zodiac }">
+    <!-- <ion-avatar slot="start">
+      <img [src]="getAvatarForZodiac(zodiac.zodiacName) | async" />
+    </ion-avatar> -->
     <ion-label>
       {{ zodiac }}
     </ion-label>
   </ion-item>
  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-button expand="full" routerLink="/zodiac-dateofbirth">
+    Check your Zodiac Sign
+  </ion-button>
+</ion-footer>

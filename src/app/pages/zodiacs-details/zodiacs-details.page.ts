@@ -17,6 +17,7 @@ export class ZodiacsDetailsPage implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.zodiacName = params['zodiacName'];
+2
       if (this.zodiacName) {
         this.zodiacService.getZodiacWithDescription(this.zodiacName).subscribe((res) => {
           this.zodiacObj = res;

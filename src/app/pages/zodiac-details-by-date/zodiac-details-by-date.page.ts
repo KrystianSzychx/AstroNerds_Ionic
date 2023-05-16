@@ -12,7 +12,7 @@ zodiacName!: string;
 date_start!: string;
 date_end!: string;
 description!: string;
-  http: any;
+http: any;
 
   constructor(private zodiacService: ZodiacService, private route: ActivatedRoute) { }
 

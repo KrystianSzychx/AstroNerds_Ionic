@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ zodiacName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content> Zodiac sign duration in the calendar:
+      <ion-card-subtitle>{{ date_start }} - {{ date_end }}</ion-card-subtitle>
+    </ion-card-content>
+    <ion-card-content> Description:
+      <p>{{ description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="block" (click)="downloadHoroscope()">
+    Download horoscope for your zodiac
+  </ion-button>
+  <ion-button fill="outline" routerLink="/zodiacs">Homepage</ion-button>
+</ion-footer>

@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>zodiacsDetails</ion-title>
+    <ion-title> {{ zodiacObj?.zodiacName }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/zodiacs"> </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
