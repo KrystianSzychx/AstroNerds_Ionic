@@ -20,4 +20,17 @@ export class ZodiacService {
         `${environment.baseUrl}/zodiacs/description?zodiacName=${zodiacName}`
     );
  } 
+
+ getZodiacByDateOfBirth(dateOfBirth: string): Observable<any> {
+  return this.http.get(`${environment.baseUrl}/zodiacs/dateOfBirth?dateOfBirth=${dateOfBirth}`)
+ }
+
+ downloadDailyHoroscope(zodiacName: string): Observable<Blob> {
+  return this.http.get(`${environment.baseUrl}/horoscopefile/${zodiacName}.pdf`, { responseType: 'blob' });
+ }
+
+ getImageForZodiac(zodiacName: string): Observable<any> {
+  
+  return this.http.get(`${environment.baseUrl}/zodiacs/images?zodiacName?zodiacName=${zodiacName}`);
+ }
 }
