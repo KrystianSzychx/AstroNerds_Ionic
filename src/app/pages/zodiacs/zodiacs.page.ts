@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, NavController } from '@ionic/angular';
 import { ZodiacService } from 'src/app/services/zodiac.service';
-import { Subscription, map } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-zodiacs',
@@ -10,12 +9,13 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./zodiacs.page.scss'],
 })
 export class ZodiacsPage implements OnInit {
-  zodiacs: {zodiacName: string}[] = [];
+  zodiacs: { zodiacName: string }[] = [];
   zodiacsSubscription!: Subscription;
-  
- 
 
-  constructor(private zodiacService: ZodiacService, private loadingCtrl: LoadingController) { }
+  constructor(
+    private zodiacService: ZodiacService,
+    private loadingCtrl: LoadingController
+  ) {}
 
   ngOnInit() {
     this.loadZodiacs();
@@ -40,9 +40,4 @@ export class ZodiacsPage implements OnInit {
       },
     });
   }
-
-  // getAvatarForZodiac(zodiacName: string) {
-  //   return this.zodiacService.getImageForZodiac(zodiacName).pipe(
-  //     map((image: Blob | MediaSource) => URL.createObjectURL(image))
-  //   );
-  }
+}

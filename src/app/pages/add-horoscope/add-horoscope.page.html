@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Add Horoscope</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Date Range</ion-label>
+      <ion-input type="text" [(ngModel)]="dateRange"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Current Date</ion-label>
+      <ion-input type="text" [(ngModel)]="currentDate"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea rows="4" [(ngModel)]="description"></ion-textarea>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Compatibility</ion-label>
+      <ion-input type="text" [(ngModel)]="compatibility"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Mood</ion-label>
+      <ion-input type="text" [(ngModel)]="mood"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Lucky Number</ion-label>
+      <ion-input type="number" [(ngModel)]="luckyNumber"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Zodiac Name</ion-label>
+      <ion-input type="text" [(ngModel)]="zodiacName"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="submitForm()">Submit</ion-button>
+</ion-content>

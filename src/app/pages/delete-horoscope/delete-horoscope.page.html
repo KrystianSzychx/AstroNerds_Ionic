@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Usuń horoskop
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Data</ion-label>
+      <ion-input [(ngModel)]="currentDate" name="currentDate" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Opis</ion-label>
+      <ion-textarea [(ngModel)]="description" name="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Znak zodiaku</ion-label>
+      <ion-input [(ngModel)]="zodiacName" name="zodiacName" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button expand="full" (click)="submitForm()">Usuń horoskop</ion-button>
+  </div>
+</ion-content>

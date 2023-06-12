@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Select Action</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/zodiacs"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full">Update Zodiac Description 
+    <ion-icon name="chevron-forward-circle-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+  <ion-button expand="full">Upload daily Horoscope
+    <ion-icon name="attach-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+  <ion-button expand="full" routerLink="/delete-horoscope">Delete Horoscope
+    <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+  <ion-button expand="full" routerLink="/add-horoscope">Add Horoscope
+    <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+</ion-content>
